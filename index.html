@@ -20,7 +20,7 @@
             </div>
             <div class="search">
                 <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search" />
+                    <input id="searchBox" type="text" class="grow" placeholder="Search" />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                         class="h-4 w-4 opacity-70">
                         <path fill-rule="evenodd"
@@ -37,8 +37,20 @@
     <nav id="categories" class="py-3 flex justify-center gap-5"></nav>
     <main>
         <section id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
-
         </section>
+
+        <!-- video details modal -->
+        <button id="showModal" class="btn hidden" onclick="detailsModal.showModal()">open modal</button>
+        <dialog id="detailsModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modalDetails"></div>
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn" >Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
     </main>
     <script src="js/video.js"></script>
 </body>
